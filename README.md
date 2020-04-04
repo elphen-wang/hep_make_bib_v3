@@ -2,7 +2,7 @@
 Making bibs for latex/tex based on the version of INSPIRE-HEP.
 
 # Introduction
-Hello friend, are you still struggling to make bibs for latex/tex documents? Here is an example to introduct how we who do high energy physics(HEP) research to anwesr this quration.
+Hello friend, are you still struggling to make bibs for latex/tex documents? Here is an example to introduct we who do high energy physics (HEP) research how to anwesr this question. On the base of the [first version](https://github.com/ElonSteveWang/hep_make_bib) and the [second version](https://github.com/ElonSteveWang/hep_make_bib) of  hep_make_bib, I developed the third edition script for automatically make bibs for latex/tex based on the version of INSPIRE-HEP. For the users of pervious version scripts, this is a perfect version. 
 
 
 
