@@ -2,9 +2,9 @@
 Making bibs for latex/tex based on [the new version of INSPIRE-HEP](https://inspirehep.net/).
 
 # Introduction
-Hello friend, are you still upseting to make bibs for latex/tex documents? Here is an example to introduct we who do high energy physics (HEP) research how to anwesr this question. On the base of the [first version](https://github.com/ElonSteveWang/hep_make_bib) and the [second version](https://github.com/ElonSteveWang/hep_make_bib) of  hep_make_bib, I developed the third edition script for automatically make bibs for latex/tex based on the version of INSPIRE-HEP. For the users of pervious version scripts, this is a perfect version, bacause it adapted new INSPIRE-HEP and fixed all problems of second version script. 
+Hello friend, are you still upseting to make bibs for latex/tex documents? Here is an example to introduct we who do high energy physics (HEP) research how to anwesr this question. On the base of the [first version](https://github.com/ElonSteveWang/hep_make_bib) and the [second version](https://github.com/ElonSteveWang/hep_make_bib) of  hep_make_bib, I developed the third edition script for automatically make bibs for latex/tex based on the new version of INSPIRE-HEP. For the users of pervious version scripts, this is a perfect version, bacause it adapted new INSPIRE-HEP and fixed all problems of second version script. 
 
-This Python script inner inserted two methods, urllib and requests modules, for users to choose freely, the default method is used requests modules. And the biggest difference from previous versions is direct parsing json file rather than parse webpage file. 
+This Python script inner inserted two methods, urllib and requests modules, for users to choose freely, the default method is used requests module. And the biggest difference from previous versions is direct parsing json file rather than parse webpage file. 
 
 # Instrcution
 
