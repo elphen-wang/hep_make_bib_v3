@@ -10,6 +10,7 @@ import os
 def get_record(url):
     resp = urllib.request.urlopen(url)
     ele_json = json.loads(resp.read())
+    
     return ele_json
  
 print("Please input your keyword...");
@@ -41,6 +42,13 @@ data=requests.get(my_url,headers=headers)
 inspirehep_json=json.loads(data.content)
 #print(data.content)
 
+'''
+filename='names.json'
+jsonData = json.dumps(inspirehep_json, indent=4)
+fileObject = open(filename, 'w')
+fileObject.write(jsonData)
+fileObject.close()
+'''
 
 total_num=inspirehep_json['hits']['total']
 main_body=inspirehep_json['hits']['hits']
@@ -65,6 +73,8 @@ for mb in main_body:
   cite=mb['metadata']['texkeys'][0]
   article_title=mb['metadata']['titles'][0]['title']
   title_link=domain_name+search_what+"/"+mb['id'];
+  index+=1
+  print("Index. ",index,", ---------->title: ",article_title);
   
   if("dois" in mb['metadata']):
     doi_link="https://doi.org/"+mb['metadata']['dois'][0]['value']
@@ -90,7 +100,7 @@ for mb in main_body:
     authors=",\ ".join(authors_data)
   
   #print(mb['metadata']['publication_info'])
-  if("acronyms" in mb['metadata']['publication_info'][0]):#and doi_title==""
+  if(("publication_info" in mb['metadata']) and ("acronyms" in mb['metadata']['publication_info'][0])):#and doi_title==""
     doi_title=mb['metadata']['publication_info'][0]['acronyms'][0]+(",\ "+mb['metadata']['publication_info'][0]['page_start']+"-"+mb['metadata']['publication_info'][0]['page_end']) if "page_start" in mb['metadata']['publication_info'][0] else ""
     #print(doi_title)
   
@@ -107,8 +117,6 @@ for mb in main_body:
   else:
     newlatex+="[\href{"+title_link+"}{\scriptsize IN\\normalsize SPIRE}]";
   
-  index+=1
-  print("Index. ",index,", ---------->title: ",article_title);
   print("\n");
   print(newlatex);
   print("\n");
